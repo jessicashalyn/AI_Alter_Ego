@@ -25,7 +25,18 @@ SECRET_KEY = 'django-insecure-sr6bw-kdgmwakpke^wev&#0_@a&90k3z8bb$@b##w^g2vqr@sp
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+import os
+
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "ai-alter-ego.onrender.com",
+]
+
+RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
+
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # Application definition
