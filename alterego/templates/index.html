@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Alter Ego Generator</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🦸 AI Alter Ego Generator</h1>
+
+        <p class="subtitle">
+            Discover your secret superhero identity powered by Artificial Intelligence.
+        </p>
+
+        <div class="form-box">
+
+            <div>
+
+                <label>Your Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name">
+
+            </div>
+
+            <div>
+
+                <label>Your Hobby</label>
+
+                <input
+                    type="text"
+                    id="hobby"
+                    placeholder="Enter your hobby">
+
+            </div>
+
+        </div>
+
+        <button id="generateBtn">
+
+            ✨ Generate Alter Ego
+
+        </button>
+
+        <div id="loading">
+
+            🤖 Creating your secret identity...
+
+        </div>
+
+        <div id="result">
+
+        </div>
+
+        <div class="action-buttons">
+
+            <button id="copyBtn">
+                📋 Copy
+            </button>
+
+            <button id="downloadBtn">
+                📄 Download PDF
+            </button>
+
+            <button id="resetBtn">
+                🔄 Reset
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>
